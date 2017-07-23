@@ -362,3 +362,59 @@ $('.player-progress').on('click', function(event) {
     // // audio.play();
     // toggleSong();
     // });
+
+    //----------------------------------------------------------for audio mute,on click of mute icon-----------------------------------------------------------------
+
+function toggleMuteAudio(){ 
+    $("audio").prop("muted",!$("audio").prop("muted")); //prop is for property
+}
+$('.fa-volume-off').on('click',function()
+{
+    toggleMuteAudio();
+});
+
+//--------------------------------------------------------------for volume up on click of icon------------------------------------------------------------------
+
+function volumeUp(){    //volumeup
+    var volume = $("audio").prop("volume")+0.2;
+    if(volume >1){
+        volume = 1;
+    }
+    $("audio").prop("volume",volume);
+}
+ $('.fa-volume-up').on('click',function()
+{
+    volumeUp();
+});
+
+//--------------------------------------------------------------for volume down on click of icon------------------------------------------------------------------
+
+function volumeDown(){  //volmedown
+    var volume = $("audio").prop("volume")-0.2;
+    if(volume <0){
+        volume = 0;
+    }
+    $("audio").prop("volume",volume);
+}
+$('.fa-volume-down').on('click',function()
+{
+    volumeDown();
+});
+$('body').on('keypress',function(event)   //display name on keypress enter
+{
+    if (event.keyCode == 13) //13 is keycode for ENTER
+      {
+        var name = $('#name-input').val();
+          if (name.length > 2)
+          {
+              var message = "Welcome, " + name;
+              $('.main .user-name').text(message);
+              $('.welcome-screen').addClass('hidden');
+              $('.main').removeClass('hidden');
+          } 
+           else
+           {
+             $('#name-input').addClass('error');
+            }
+       }
+});
