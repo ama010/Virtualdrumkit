@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Song App</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="welcome-screen ">
+            <h1>Welcome to Songify </h1>
+            <h3 style="color: rgb(110, 4, 6); font-family:Forte;"> Enter name to access your account </h3>
+            <div class="input-wrapper">
+                <input type="text" placeholder="Enter your Email" id="name-input">
+                <input type="password" name="password" placeholder="Enter your password">
+                <button style="background: rgba(116, 33, 33, 0.58); color: #abf009; border: 0; padding: 8px; font-size: 15px;"> Go </button>
+            </div>
+        </section>
+        <div class="main hidden">
+            <header>
+                <span class="hsangeet">Songify</span>
+                <div class="right floated user-name"> </div>
+            </header>
+            <section class="content">
+                <audio src="song4.mp3"></audio>
+
+<table id="songs">
+
+                <thead class="list-headers">
+        <td> Title </td>
+        <td> Artist </td>
+        <td> Album </td>
+        <td> Duration </td>
+      </thead>
+
+      <tbody>
+        <!-- <div class="song-list"> -->
+        <tr class="song" id="song1">
+        <td class="song-name"></td>
+        <td class="song-artist"></td>
+        <td class="song-album"></td>
+        <td class="song-length"></td>
+      </tr>
+
+        <tr class="song" id="song2">
+          <td class="song-name"></td>
+          <td class="song-artist"></td>
+          <td class="song-album"></td>
+          <td class="song-length"></td>
+      </tr>
+        <tr class="song" id="song3">
+          <td class="song-name"></td>
+          <td class="song-artist"></td>
+          <td class="song-album"></td>
+          <td class="song-length"></td>
+      </tr>
+        <tr class="song" id="song4">
+          <td class="song-name"></td>
+          <td class="song-artist"></td>
+          <td class="song-album"></td>
+          <td class="song-length"></td>
+      </tr>
+        <tr class="song" id="song5">
+          <td class="song-name"></td>
+          <td class="song-artist"></td>
+          <td class="song-album"></td>
+          <td class="song-length"></td>
+      </tr>
+
+        <!-- </div> -->
+      </tbody>
+
+</table>
+
+        <div class="current-song-wrapper">
+        <img class="current-song-image">
+        <div>
+        <p class="current-song-name"></p>
+        <p class="current-song-album"></p>
+       	</div>
+        </div>
+
+            </section>
+            <footer>
+                <div class="controls">
+                    <div class="player-buttons">
+                        <a title="Create Your Own Music" href="drumkit.html" class="drums">Drumkit<img src="drum.png" style="width: 40px;"><br></a>
+
+                        <i title="Shuffle" class="fa fa-random clickable disabled" aria-hidden="true"></i>
+                        <i title="Previous" class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                        <i title="Play/Pause" class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i title="Next" class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                        <i title="Loop" class="fa fa-repeat disabled clickable" aria-hidden="true"></i>
+                         <!-- <i class="fa fa-bar-chart clickable active" aria-hidden="true"></i> -->
+
+                    </div>
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="jquery.js">
+    </script>
+    <script src="main.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+</body>
+
+</html>
